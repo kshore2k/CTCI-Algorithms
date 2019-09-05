@@ -14,7 +14,7 @@
 // Time: O(n)
 // Space: O(1)
 
-class RandomBSTNode {
+export class RandomBSTNode {
     constructor(data) {
         this.num = null;
         this.data = data;
@@ -23,7 +23,7 @@ class RandomBSTNode {
     };
 };
 
-class RandomNodeBST {
+export class RandomNodeBST {
     constructor() {
         this.root = null;
         this.size = 0;

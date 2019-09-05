@@ -15,7 +15,7 @@
 // Time Complexity:
 // Space Complexity:
 
-class SetOfStacks {
+export class SetOfStacks {
     constructor(threshHold){
         this.stackCapacity = threshHold;
         this.stacks = [];

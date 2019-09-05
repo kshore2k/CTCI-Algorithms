@@ -1,5 +1,5 @@
 // in Directed (vs undirected) paths are one-way street
-class DirectedGraph { 
+export class DirectedGraph { 
     constructor(numOfVertices) {
         this.numOfVertices = numOfVertices;
         this.adjList = new Map();

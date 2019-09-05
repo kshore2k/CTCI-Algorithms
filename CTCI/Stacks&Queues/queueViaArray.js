@@ -1,4 +1,4 @@
-class QueueViaArray {
+export class QueueViaArray {
     constructor() {
         this.items = [];
     };

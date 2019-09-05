@@ -13,7 +13,7 @@
 // time complexity: O(n)
 // space complexity: O(1)
 
-class sortedStack {
+export class sortedStack {
     constructor() {
         this.top = null;
         this.container = new Stack();

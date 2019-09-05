@@ -10,7 +10,7 @@
 // Pop the element on top of stack2 and save in variable.
 // While stack2 is not empty, push everything from stack2 back to stack1.
 
-class QueueViaStacks {
+export class QueueViaStacks {
     constructor(){
         this.stack1 = new Stack();
         this.stack2 = new Stack();

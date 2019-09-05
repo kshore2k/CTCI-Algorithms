@@ -1,11 +1,11 @@
-class QueueNode {
+export class QueueNode {
     constructor(data){
         this.data = data;
         this.next = null;
     };
 };
 
-class Queue {
+export class Queue {
     constructor(){
         this.first = null;
         this.last = null;

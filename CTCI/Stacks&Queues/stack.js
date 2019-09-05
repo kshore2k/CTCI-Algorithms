@@ -1,11 +1,11 @@
-class StackNode {
+export class StackNode {
     constructor(data){
         this.data = data;
         this.next = null;
     }
 };
 
-class Stack {
+export class Stack {
     constructor(){
         this.top = null;
     };
