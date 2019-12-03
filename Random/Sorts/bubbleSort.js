@@ -7,8 +7,9 @@
 // After each iteration i of all elements, the greatest value remaining in unsorted half will have bubbled to the end of the array (sorted half),
 // thus not needing to compare elements at the end of the array again on the following iterations (done so by incrimenting k).
 
-// Time complexity : Average O(n^2)
+// Time complexity : Best O(n) Average O(n^2)
 // Space complexity: O(1)
+// Potential use case: nearly sorted array can achieve O(n) time
 
 // TWO LOOP IMPLEMENTATION :
 // We know that the outer loop i will run n - 1 times because each loop will have sorted 1 more element and after sorting n - 1 elements the smallest element 
@@ -37,10 +38,9 @@ const bubbleSort = (arr) => {
 // Similar as above only we check if swaps were made after each pass and we keep iterating until we get a pass where no swaps were made.
 const bubbleSortDoWhile = (arr) => {
     let swapped;
-    let k = 0;
+    let k = 1;
     do {
         swapped = false;
-        k++;
         for (let i = 0; i < arr.length - k; i++) {
             if (arr[i] > arr[i+1]) {
                 let temp = arr[i];
@@ -50,10 +50,30 @@ const bubbleSortDoWhile = (arr) => {
                 swapped = true;
             }
         }
+        k++;
     } while (swapped)
     return arr;
 };
 
 const arr = [5,4,3,2,1];
 console.log(bubbleSortDoWhile(arr)); // logs [1,2,3,4,5]
+
+const bubz = (arr) => {
+    for (let i = arr.length - 1; i > 0; i--) {
+        for (let j = 0; j < i; j++) {
+            if (arr[j] > arr[j+1]) {
+                swapEm(arr, j, j+1);
+            }
+        }
+    }
+    return arr;
+};
+
+const swapEm = (arr, idx1, idx2) => {
+    let temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+};
+
+// console.log(bubz(arr));
 
