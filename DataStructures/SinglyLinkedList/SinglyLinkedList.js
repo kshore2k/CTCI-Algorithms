@@ -149,6 +149,28 @@ class SinglyLinkedList {
         }
     };
 
+    removeNodesWithVal(val) {
+        let prev = new SLNode(null);
+        prev.next = this.head;
+        let curr = this.head;
+        while (curr) {
+            if (curr.data === val) {
+                if (curr === this.head) {
+                    this.head = this.head.next;
+                    curr = this.head;
+                    prev.next = this.head;
+                } else {
+                    prev.next = curr.next;
+                    curr = prev.next;
+                }
+            } else {
+                curr = curr.next;
+                prev = prev.next;
+            }
+        }
+        return this;
+    }
+
     reverse() {
         if (!this.head) throw new Error("Cannot Perform Reverse On Empty List");
         let curr = this.head;
@@ -179,4 +201,3 @@ class SinglyLinkedList {
 };
 
 const list = new SinglyLinkedList();
-
